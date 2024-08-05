@@ -10,4 +10,16 @@ def minenergy(l):
         i1=i1+l[i]
         i=i+1
     return min(i0,i1)
-print(minenergy(l))
+
+
+def min_cost_climbing_stairs(energy):
+    n = len(energy)
+    dp = [0] * n
+    dp[0] = energy[0]
+    dp[1] = energy[1]
+
+    for i in range(2, n):
+        dp[i] = min(dp[i - 1], dp[i - 2]) + energy[i]
+
+    return min(dp[-1], dp[-2])
+print(min_cost_climbing_stairs(l))
