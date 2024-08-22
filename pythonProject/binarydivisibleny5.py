@@ -18,4 +18,6 @@ for i in l:
     k=reverse(i)
     if(binarytoint(k)%5==0):
        print(i)
-
+ print("forked by laxmi")       
+        
+        
